@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contato - GAMMA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="container barra">
+        <a class="marca" href="index.html">
+          <img src="imagens/hamburguer.svg" alt="">
+          GAMMA
+        </a>
+        <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="cardapio.html">Cardápio</a>
+          <a href="localizacao.html">Localização</a>
+          <a href="login.html">Entrar</a>
+          <a class="ativo" href="contato.html">Contato</a>
+        </nav>
+        <div class="acoes-menu">
+          <button class="botao-icone" id="botao-busca" type="button" aria-label="Mostrar busca" aria-expanded="false">
+            <img class="icone" src="imagens/busca.svg" alt="">
+          </button>
+          <button class="botao-icone" id="botao-carrinho" type="button" aria-label="Abrir carrinho">
+            <img class="icone" src="imagens/carrinho.svg" alt="">
+          </button>
+          <button class="botao-icone" id="botao-tema" type="button" aria-label="Ativar modo claro">
+            <img class="icone" src="imagens/sol.svg" alt="">
+          </button>
+          <button class="botao-icone botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+            <img class="icone" src="imagens/menu.svg" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="busca-painel" id="busca-painel">
+        <form class="container formulario-busca" action="cardapio.html" method="get" role="search">
+          <input id="campo-busca" name="busca" type="text" maxlength="50" placeholder="Buscar no cardápio" aria-label="Campo de busca">
+          <button class="botao pequeno" type="submit">Buscar</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <section class="capa capa-contato">
+        <div class="sombra-capa"></div>
+        <img class="foto-capa" src="imagens/imagem(4).jpg" alt="Hambúrguer artesanal">
+        <div class="container">
+          <div class="conteudo-capa">
+            <span class="sobretitulo">Fale conosco</span>
+            <h1>CONTATO</h1>
+            <p>Tem alguma dúvida, sugestão ou quer fazer um pedido especial? Estamos aqui para te ajudar!</p>
+            <div class="contato-infos">
+              <div class="dado-local">
+                <img class="icone" src="imagens/telefone.svg" alt="">
+                <div>
+                  <strong>Telefone</strong>
+                  <p>
+                    (11) 98765-4321
+                    <br>
+                    Segunda a Domingo
+                    <br>
+                    das 11h às 23h
+                  </p>
+                </div>
+              </div>
+              <div class="dado-local">
+                <img class="icone" src="imagens/email.svg" alt="">
+                <div>
+                  <strong>E-mail</strong>
+                  <p>
+                    contato@gamma.com
+                    <br>
+                    Respondemos em até 24h.
+                  </p>
+                </div>
+              </div>
+              <div class="dado-local">
+                <img class="icone" src="imagens/marcador-mapa.svg" alt="">
+                <div>
+                  <strong>Endereço</strong>
+                  <p>
+                    Av. Principal, 1234
+                    <br>
+                    Centro - Sua Cidade/UF
+                    <br>
+                    CEP: 12345-678
+                  </p>
+                </div>
+              </div>
+              <div class="redes-linha">
+                <strong>Nos siga nas redes</strong>
+                <div class="redes">
+                  <span class="rede" aria-label="Instagram">
+                    <img src="imagens/logo-instagram.svg" alt="">
+                  </span>
+                  <span class="rede" aria-label="Facebook">
+                    <img src="imagens/logo-facebook.svg" alt="">
+                  </span>
+                  <span class="rede" aria-label="TikTok">
+                    <img src="imagens/logo-tiktok.svg" alt="">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container contato-grade">
+        <div class="painel">
+          <h2>Envie uma mensagem</h2>
+          <p>Preencha o formulário abaixo e retornaremos o mais breve possível.</p>
+          <form id="formulario-contato">
+            <input name="nome" type="text" maxlength="70" placeholder="Nome" aria-label="Nome" required>
+            <input name="email" type="email" maxlength="100" placeholder="E-mail" aria-label="E-mail" required>
+            <textarea name="mensagem" maxlength="1000" placeholder="Mensagem" aria-label="Mensagem" required></textarea>
+            <button class="botao largo" type="submit">
+              <img src="imagens/enviar.svg" alt="">
+              Enviar mensagem
+            </button>
+            <p class="aviso-form" id="aviso-contato" role="status"></p>
+          </form>
+        </div>
+        <div class="painel">
+          <h2>Nosso Endereço</h2>
+          <div class="mapa">
+            <iframe src="https://www.google.com/maps?q=Brasil&amp;output=embed" title="Google Maps sem endereço da GAMMA marcado" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="nota-mapa">Mapa geral do Brasil, sem endereço da GAMMA marcado.</p>
+          <div class="contato-extras">
+            <div>
+              <img class="icone amarelo" src="imagens/relogio.svg" alt="">
+              Horário de Funcionamento
+              <br>
+              Segunda a Domingo
+              <br>
+              das 11h às 23h
+            </div>
+            <div>
+              <img class="icone amarelo" src="imagens/wifi.svg" alt="">
+              Wi-Fi gratuito
+            </div>
+            <div>
+              <img class="icone amarelo" src="imagens/cartao.svg" alt="">
+              Aceitamos cartões
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="rodape">
+      <div class="container">
+        <a class="marca" href="index.html">
+          <img src="imagens/hamburguer.svg" alt="">
+          GAMMA
+        </a>
+        <p>Sabor, qualidade e muito mais em um só lugar.</p>
+        <div class="redes">
+          <span class="rede" aria-label="Instagram">
+            <img src="imagens/logo-instagram.svg" alt="">
+          </span>
+          <span class="rede" aria-label="Facebook">
+            <img src="imagens/logo-facebook.svg" alt="">
+          </span>
+          <span class="rede" aria-label="TikTok">
+            <img src="imagens/logo-tiktok.svg" alt="">
+          </span>
+        </div>
+        <small>2026 GAMMA Burger. Todos os direitos reservados.</small>
+      </div>
+    </footer>
+  </body>
+</html>

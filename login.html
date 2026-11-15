@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entrar - GAMMA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="container barra">
+        <a class="marca" href="index.html">
+          <img src="imagens/hamburguer.svg" alt="">
+          GAMMA
+        </a>
+        <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="cardapio.html">Cardápio</a>
+          <a href="localizacao.html">Localização</a>
+          <a class="ativo" href="login.html">Entrar</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+        <div class="acoes-menu">
+          <button class="botao-icone" id="botao-busca" type="button" aria-label="Mostrar busca" aria-expanded="false">
+            <img class="icone" src="imagens/busca.svg" alt="">
+          </button>
+          <button class="botao-icone" id="botao-carrinho" type="button" aria-label="Abrir carrinho">
+            <img class="icone" src="imagens/carrinho.svg" alt="">
+          </button>
+          <button class="botao-icone" id="botao-tema" type="button" aria-label="Ativar modo claro">
+            <img class="icone" src="imagens/sol.svg" alt="">
+          </button>
+          <button class="botao-icone botao-menu" id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">
+            <img class="icone" src="imagens/menu.svg" alt="">
+          </button>
+        </div>
+      </div>
+      <div class="busca-painel" id="busca-painel">
+        <form class="container formulario-busca" action="cardapio.html" method="get" role="search">
+          <input id="campo-busca" name="busca" type="text" maxlength="50" placeholder="Buscar no cardápio" aria-label="Campo de busca">
+          <button class="botao pequeno" type="submit">Buscar</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <section class="capa capa-login">
+        <div class="sombra-capa"></div>
+        <img class="foto-capa" src="imagens/imagem(4).jpg" alt="Hambúrguer artesanal">
+        <div class="container">
+          <div class="conteudo-capa">
+            <span class="sobretitulo">Bem-vindo de volta</span>
+            <h1>ENTRAR</h1>
+            <p>Acesse sua conta e aproveite nossas novidades e descontos exclusivos!</p>
+            <form id="formulario-login">
+              <div class="login-campos">
+                <div class="campo-com-icone">
+                  <input id="login-usuario" name="usuario" type="text" maxlength="100" placeholder="E-mail ou usuário" autocomplete="username" aria-label="E-mail ou usuário" required>
+                </div>
+                <div class="campo-com-icone">
+                  <input id="login-senha" name="senha" type="password" maxlength="40" placeholder="Senha" autocomplete="current-password" aria-label="Senha" required>
+                  <img class="olho-estatico" src="imagens/olho.svg" alt="">
+                </div>
+              </div>
+              <div class="login-opcoes">
+                <label>
+                  <input type="checkbox" name="lembrar">
+                  Lembrar-me
+                </label>
+                <a class="link-amarelo">Esqueceu sua senha?</a>
+              </div>
+              <button class="botao largo" type="submit">
+                Entrar
+                <img src="imagens/seta-direita.svg" alt="">
+              </button>
+              <p class="aviso-form" id="aviso-login" role="status"></p>
+            </form>
+            <p class="cadastro-link">
+              Não tem uma conta?
+              <a class="link-amarelo" href="#cadastro" data-abrir-cadastro>Cadastre-se</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="fundo-modal" id="modal-cadastro">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-cadastro">
+        <div class="modal-topo">
+          <h2 id="titulo-cadastro">Cadastre-se</h2>
+          <button class="botao-icone fechar-modal" type="button" aria-label="Fechar cadastro">
+            <img class="icone" src="imagens/fechar.svg" alt="">
+          </button>
+        </div>
+        <form id="formulario-cadastro">
+          <label for="cadastro-nome">Nome completo</label>
+          <input id="cadastro-nome" name="nome" type="text" maxlength="70" autocomplete="name" required>
+          <label for="cadastro-email">E-mail</label>
+          <input id="cadastro-email" name="email" type="email" maxlength="100" autocomplete="email" required>
+          <label for="cadastro-telefone">Telefone</label>
+          <input id="cadastro-telefone" name="telefone" type="tel" inputmode="numeric" maxlength="15" placeholder="(11) 98765-4321" autocomplete="tel" required>
+          <label for="cadastro-cpf">CPF</label>
+          <input id="cadastro-cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required>
+          <label for="cadastro-senha">Senha</label>
+          <input id="cadastro-senha" name="senha" type="password" minlength="8" maxlength="40" autocomplete="new-password" required>
+          <label for="cadastro-confirmar">Confirmar senha</label>
+          <input id="cadastro-confirmar" name="confirmar" type="password" minlength="8" maxlength="40" autocomplete="new-password" required>
+          <button class="botao largo" type="submit">Cadastrar</button>
+          <p class="aviso-form" id="aviso-cadastro" role="status"></p>
+        </form>
+      </div>
+    </div>
+    <footer class="rodape">
+      <div class="container">
+        <a class="marca" href="index.html">
+          <img src="imagens/hamburguer.svg" alt="">
+          GAMMA
+        </a>
+        <p>Sabor, qualidade e muito mais em um só lugar.</p>
+        <div class="redes">
+          <span class="rede" aria-label="Instagram">
+            <img src="imagens/logo-instagram.svg" alt="">
+          </span>
+          <span class="rede" aria-label="Facebook">
+            <img src="imagens/logo-facebook.svg" alt="">
+          </span>
+          <span class="rede" aria-label="TikTok">
+            <img src="imagens/logo-tiktok.svg" alt="">
+          </span>
+        </div>
+        <small>2026 GAMMA Burger. Todos os direitos reservados.</small>
+      </div>
+    </footer>
+  </body>
+</html>
